@@ -97,3 +97,32 @@
     grid-column: auto;
   }
 }
+
+/* ===== Лаб. 4 ===== */
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+.results-info {
+  margin-bottom: 15px;
+  color: gray;
+}
+
+/* "Новинка!" — червоний, розмір гліфів у 1,2 раза більший за назву */
+.new-label {
+  margin-left: 12px;
+  color: red;
+  font-size: 1.2em;
+  font-style: normal;
+  font-weight: 700;
+}

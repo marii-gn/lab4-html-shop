@@ -248,3 +248,54 @@
   .site-header > .btn { float: none; }
   .popular { position: static; width: auto; margin-top: 20px; }
 }
+
+/* ===== Лаб. 4 ===== */
+
+/* 1. Падаючі зображення (висота 36px < 2 * висота великої літери заголовка ≈ 40px) */
+.falling-layer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.falling-item {
+  position: absolute;
+  top: -40px;
+  height: 36px;
+  width: auto;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fall {
+  from { top: -40px; }
+  to   { top: 100%; }
+}
+
+/* 5. Вертикальне меню праворуч для екрану <= 768px */
+.main-nav.nav-vertical {
+  float: right;
+  clear: both;
+}
+
+.main-nav.nav-vertical li {
+  display: block;
+  margin-right: 0;
+  text-align: right;
+}
+
+body.narrow { padding-top: 0; }
+
+body.narrow .site-header {
+  position: static;
+  height: auto;
+}
+
+body.narrow .site-header::after {
+  content: "";
+  display: block;
+  clear: both;
+}
